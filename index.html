@@ -2,14 +2,37 @@
 
 <html>
   <head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>Aphronymity</title>
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 
 <body>
+
+	<script>
+		var current_h = null;
+		var current_w = null;
+
+		$('.img1').hover(
+			function(){
+				current_h = $(this, 'img')[0].height;
+				current_w = $(this, 'img')[0].width;
+				$(this).stop(true, false).animate({width: (current_w * 1.3), height: (current_h * 1.3)}, 300);
+			},
+			function(){
+			$(this).stop(true, false).animate({width: current_w + 'px', height: current_h + 'px'}, 300);
+			}
+		);
+	</script>
 	
-  <h1>Welcome To Aphronymity</h1>
-  <h2>Where Everything You Do Is Aphronymous!</h2>
+	<div class="top">
+	</div>
+	
+	<div class="center">
+		<p>My name is Ron Thomas.</p>
+		<img src="love.png" class="img1" id="pic1"/>
+		
+	</div>
   
 </body>
 </html>

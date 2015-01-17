@@ -10,27 +10,28 @@
 <body>
 
 	<script>
-		var current_h = null;
-		var current_w = null;
+		function expand(x) {
+			x.style.height = "400px";
+			x.style.width = "322px";
+		}
 
-		$('.img1').hover(
-			function(){
-				current_h = $(this, 'img')[0].height;
-				current_w = $(this, 'img')[0].width;
-				$(this).stop(true, false).animate({width: (current_w * 1.3), height: (current_h * 1.3)}, 300);
-			},
-			function(){
-			$(this).stop(true, false).animate({width: current_w + 'px', height: current_h + 'px'}, 300);
-			}
-		);
+		function contract(x) {
+			x.style.height = "200px";
+			x.style.width = "161px";
+		}
 	</script>
 	
 	<div class="top">
+		<h1>Aphronymity</h1>
+		<a href="page2.html">Assignments</a>
 	</div>
 	
-	<div class="center">
-		<p>My name is Ron Thomas.</p>
-		<img src="love.png" class="img1" id="pic1"/>
+	<hr />
+	
+	<div class="middle">
+		<br />
+		<img src="love.png" class="img1" id="pic1" onmouseover="expand(this)" onmouseout="contract(this)"/>
+		<p class="right">My name is Ron Thomas.</p>
 		
 	</div>
   

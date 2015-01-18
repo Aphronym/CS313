@@ -9,6 +9,7 @@
 
 <body>
 
+	<!-- Begin JavaScript -->
 	<script>
 		function expand(x) {
 			x.style.height = "400px";
@@ -19,21 +20,38 @@
 			x.style.height = "200px";
 			x.style.width = "161px";
 		}
+		function changeColor(x) {
+			x.style.color = "#e4001b";
+		}
+		function reveal(x) {
+			x.style.color = "#ececec";
+		}
 	</script>
-	
+	<!-- End JavaScript -->
+		
+	<!-- Begin Top Div -->
 	<div class="top">
-		<h1>Aphronymity</h1>
+		<h1 onmouseover="changeColor(this)">Aphronymity</h1>
 		<a href="page2.html">Assignments</a>
 	</div>
+	<!-- End Top Div -->
 	
 	<hr />
 	
+	<!-- Begin Main Div -->
 	<div class="middle">
 		<br />
 		<img src="love.png" class="img1" id="pic1" onmouseover="expand(this)" onmouseout="contract(this)"/>
-		<p class="right">My name is Ron Thomas.</p>
-		
+		<p class="right">Hello...</p>
+		<p class="hidden" onmouseover="reveal(this)">My name is Ron Thomas. 
+													 I'm a computer science major from Pleasant Grove Utah...</p>
+		<p class="hidden" onmouseover="reveal(this)">I am an avid hockey fan and I love to play racquetball...</p>
+		<p class="hidden" onmouseover="reveal(this)">I enjoy creating and playing with words, and throwing in
+		                                             an occasional unexpected joke...</p>
+		<p class="hidden" onmouseover="reveal(this)">And this picture to the left isn't me, but it's definitely something I'd say.</p>
+		<p class="hidden" onmouseover="reveal(this)">I also enjoy finding that which is hidden and that which is left to be found...</p>
 	</div>
+	<!-- End Top Div -->
   
 </body>
 </html>

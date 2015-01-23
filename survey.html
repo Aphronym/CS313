@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title>PHP Survey</title>
+	</head>
+
+<body>
+	
+	<!-- Begin JavaScript -->
+	<script>
+		$(document).ready(function() {                         
+			$('.p1_radio').on('click',function() {               
+			$('.p1_radio').parent().css('color','#ececec');    
+			$(this).parent().css('color','#000000');
+			});
+		});
+	</script>
+	
+	<div class="middle">
+		<form method="POST" id="userform" action="form.php">
+			<label>Name:</label> &nbsp <input type="text" id="name" name="name" /><br /><br />
+			<label>Email:</label> &nbsp <input type="text" id="email" name="email" /><br />
+	
+			<br />
+			<label>Major</label><br />
+				<label class="major"><input type="radio" name="major" />Computer Science</label><br />
+				<label class="major"><input type="radio" name="major" />CIT</label><br />
+				<label class="major"><input type="radio" name="major" />Web Design and Development</label><br />
+				<label class="major"><input type="radio" name="major" />Computer Engineering</label><br />
+			
+			<br />
+			<label>Places Visited</label><br />
+				<input type="checkbox" name="checkboxvar[]" id="italy" />Italy<br />
+				<input type="checkbox" name="checkboxvar[]" id="cr" />Costa Rica<br />
+				<input type="checkbox" name="checkboxvar[]" id="germany" />Germany<br />
+				<input type="checkbox" name="checkboxvar[]" id="utah" />Utah<br />
+			
+			<br />
+			<label>Comments:</label><br />
+				<textarea rows="10" cols="40">Enter Comments Here</textarea>
+		
+			<br />	
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+		
+</body>
+
+</html>

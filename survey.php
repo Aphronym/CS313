@@ -8,7 +8,7 @@
 	echo $_POST["least"];
 	echo "<br />";
 	
-	if (isset($reader) && $reader == "books")
+	if (isset($_POST["read"]))
 	{
 		echo "checked";
 		echo $reader;

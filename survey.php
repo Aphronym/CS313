@@ -1,7 +1,6 @@
 <?php
 	
-	$reader = test_input($_POST["read"]);
-	$run = test_input($_POST["run"]);
+	$shoot = $_POST["shoot"];
 	
 	echo $_POST["favorite"];
 	echo "<br />";
@@ -10,15 +9,16 @@
 	
 	if (isset($_POST["read"]))
 	{
-		echo "checked";
-		echo $reader;
+		echo $_POST["read"];
 		echo "<br />";
 	}
 	
 	if (isset($_POST["shoot"]))
 	{
-		echo $_POST["shoot"];
-		echo "<br />";
+		foreach ($shoot as $value)
+		{
+			echo "$value <br />";
+		}
 	}
 	
 	if (isset($_POST["run"]))

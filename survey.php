@@ -1,24 +1,29 @@
 <?php
 	
-	echo $_POST['favorite'];
+	$reader = test_input($_POST["read"]);
+	$run = test_input($_POST["run"]);
+	
+	echo $_POST["favorite"];
 	echo "<br />";
-	echo $_POST['least'];
+	echo $_POST["least"];
+	echo "<br />";
 	
-	if (isset($_POST['read']))
+	if (isset($reader) && $reader == "books")
 	{
-		echo $_POST['read'];
+		echo "checked";
+		echo $reader;
 		echo "<br />";
 	}
 	
-	if (isset($_POST['shoot']))
+	if (isset($_POST["shoot"]))
 	{
-		echo $_POST['shoot'];
+		echo $_POST["shoot"];
 		echo "<br />";
 	}
 	
-	if (isset($_POST['run']))
+	if (isset($_POST["run"]))
 	{
-		echo $_POST['run'];
+		echo $_POST["run"];
 		echo "<br />";
 	}
 	

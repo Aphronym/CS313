@@ -1,17 +1,25 @@
 <?php
 	
-	echo $_POST['name'];
+	echo $_POST['favorite'];
 	echo "<br />";
-	echo $_POST["email"];
+	echo $_POST['least'];
 	
-	if (isset($_POST["major"]))
+	if (isset($_POST['read']))
 	{
-		print $_POST["major"];
+		echo $_POST['read'];
+		echo "<br />";
 	}
 	
-	if (isset($_POST["checkboxvar"]))
+	if (isset($_POST['shoot']))
 	{
-		print $_POST["checkboxvar"];
+		echo $_POST['shoot'];
+		echo "<br />";
+	}
+	
+	if (isset($_POST['run']))
+	{
+		echo $_POST['run'];
+		echo "<br />";
 	}
 	
 ?>

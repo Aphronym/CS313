@@ -97,3 +97,15 @@ ul
 	margin-left: 175px;
 	color: #606060;
 }
+
+.result
+{
+	color: #ececec;
+	text-align: center;
+	font-size: 2em;
+}
+
+.word
+{
+	color: #e4001b;
+}

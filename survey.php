@@ -2,8 +2,9 @@
 	session_start();
 	if ($_SESSION["voted"] == "yes")
 	{
+		session_regenerate_id(true);
 		header('Location: results.php');
-		die();
+		exit();
 	}
 ?>
 
@@ -90,7 +91,7 @@
 				<input type="radio" name="run" id="fuelcb" onclick="selected(fuel)" value="on low fuel" /><label id="fuel" onmouseover="revert(this)">On low fuel</label><br />
 		
 			<br />	
-			<button type="submit">Submit</button>
+			<button type="submit" name="submit" value="Submit">Submit</button>
 			<a href="results.php">View Results</a>
 		</form>
 	</div>

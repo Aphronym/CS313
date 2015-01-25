@@ -13,41 +13,81 @@
 <body>
 <?php
 
-	$_SESSION["voted"] = "yes";
-	$_SESSION["fname"] = $_POST["name"];
-	$_SESSION["fromcity"] = $_POST["city"];
-	$_SESSION["favword"] = $_POST["favorite"];
-	$_SESSION["leastfav"] = $_POST["least"];
-	$_SESSION["reader"] = $_POST["read"];
-	$_SESSION["shooter"] = $_POST["shoot"];
-	$_SESSION["runner"] = $_POST["run"];
-	
-	function noVote()
+	if ($_POST["submit"] == "Submit")
 	{
-		echo "<h1>Oops! You still need to vote!</h1>";
+		$_SESSION["voted"] = "yes";
+		$_SESSION["fname"] = $_POST["name"];
+		$_SESSION["fromcity"] = $_POST["city"];
+		$_SESSION["favword"] = $_POST["favorite"];
+		$_SESSION["leastfav"] = $_POST["least"];
+		$_SESSION["reader"] = $_POST["read"];
+		$_SESSION["shooter"] = $_POST["shoot"];
+		$_SESSION["runner"] = $_POST["run"];
+	}
+	
+	if (isset($_POST["name"]))
+	{
+		$name = $_POST["name"];
+	}
+	else
+	{
+		$name = $_SESSION["fname"];
+	}
+	
+	if (isset($_POST["city"]))
+	{
+		$city = $_POST["city"];
+	}
+	else
+	{
+		$city = $_SESSION["fromcity"];
 	}
 		
-	$name = $_POST["name"];
-	$city = $_POST["city"];
-	$favorite = $_POST["favorite"];
-	$least = $_POST["least"];
-	
-	
+	if (isset($_POST["favorite"]))
+	{
+		$favorite = $_POST["favorite"];
+	}
+	else
+	{
+		$favorite = $_SESSION["favword"];
+	}
+		
+	if (isset($_POST["least"]))
+	{
+		$least = $_POST["least"];
+	}
+	else
+	{
+		$least = $_SESSION["leastfav"];
+	}
+		
 	if (isset($_POST["read"]))
 	{
 		$read = $_POST["read"];
 	}
-	
+	else
+	{
+		$read = $_SESSION["reader"];
+	}
+		
 	if (isset($_POST["shoot"]))
 	{
 		$shoot = $_POST["shoot"];
+	}
+	else
+	{
+		$shoot = $_SESSION["shooter"];
 	}
 	
 	if (isset($_POST["run"]))
 	{
 		$run = $_POST["run"];
 	}
-	
+	else
+	{
+		$run = $_SESSION["runner"];
+	}
+		
 	echo "<div class='top'><h1>Results</h1></div>";
 	
 	echo "<div class='middle'>

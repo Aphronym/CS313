@@ -34,6 +34,7 @@
 	$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 	$next = $db->query("SELECT response FROM response");
 	$results2 = $next->fetchAll(PDO::FETCH_ASSOC);
+	$comment = $db->query("INSERT INTO comment (comment) VALUES ($comment_in)");
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +60,8 @@
 				{
 					$display = $response['response'] . "<br />";
 				}
-						
+				
+				echo "<textarea name='comment'></textarea>";		
 			?>
 			<button type="submit" name="submit" value="Submit">Select</button>
 		</form>
